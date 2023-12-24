@@ -48,7 +48,7 @@ const VC = new viewsController()
 
 const viewsRouter=Router()
 
-viewsRouter.get('/',authLogin,VC.home)
+viewsRouter.get('/',VC.home)
 
 viewsRouter.get('/products',auth, VC.products)
 
