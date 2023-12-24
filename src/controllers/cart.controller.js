@@ -82,7 +82,7 @@ class cartController {
         const deleteProducto = await this.CM.deleteProduct(cid, pid)
     
         if((await deleteProducto=='productoEliminado')){
-            resp.send("se elimino el producto correctamente")
+            resp.status(200).send({status:'ok',message:"se elimino el producto correctamente"})
         }else if(await deleteProducto=="pidNotFound"){
             resp.status(500).send({status:'error', message:"no existe ningun producto en el carrito con ese id"})
         }else{
