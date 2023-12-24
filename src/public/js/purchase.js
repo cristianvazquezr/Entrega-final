@@ -154,6 +154,8 @@ function botonEliminar(){
     }
 }
 
+botonEliminar()
+
 async function  DeleteProduct(idElementoEliminar, idcart){
     //elimino el producto
     let deleteProduct = await fetch(`'/carts/${idcart}/product/${idElementoEliminar}`, {
