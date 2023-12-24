@@ -150,6 +150,7 @@ function botonEliminar(){
         botonEliminar[i].onclick=(event)=>{
             idElementoEliminar=((event.target.attributes.id.nodeValue))
             DeleteProduct(idElementoEliminar,idCart);
+            
         }
     }
 }
@@ -166,7 +167,7 @@ async function  DeleteProduct(idElementoEliminar, idcart){
     })
     let response=await deleteProduct.json()
 
-    if(response.status=='error'){
+    if(await response.status=='error'){
         //cartel
         Swal.fire({
             icon: "error",
@@ -182,5 +183,6 @@ async function  DeleteProduct(idElementoEliminar, idcart){
               background: "linear-gradient(to right, #00b09b, #96c93d)",
             }
         }).showToast();
+        location.reload(false)
     }
 }
