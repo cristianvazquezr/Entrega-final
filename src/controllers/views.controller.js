@@ -70,6 +70,7 @@ class viewsController{
         let cid=req.params.cid
         let respuesta=await this.CM.getCartById(cid)
         resp.render("cartId",{
+            cart:cid,
             role:req.user.role,
             user:userLogged,
             productos:respuesta[0].products,

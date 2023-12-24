@@ -2,7 +2,7 @@
     <div class="ajustes container">
         <h1>Carrito</h1>
         <table class="table table-bordered">
-            <thead class="encabezado">
+            <thead class="encabezado" id={{cart}}>
                 <tr>
                     <th scope="col">Id</th>
                     <th scope="col">Titulo</th>             
@@ -21,6 +21,7 @@
                         <td id=p{{this.product._id}} class="price">{{this.product.price}}</td>
                         <td id=q{{this.product._id}} class="quantity">{{this.quantity}}</td>
                         <td id={{this.product._id}} class="totalPrice"></td>
+                        <td><button id={{this.product._id}} class="botonEliminar">🗑️</button></td>
                     </tr>
                 {{/each}}
             </tbody>
