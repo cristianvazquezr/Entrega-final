@@ -27,7 +27,6 @@ function authLogin(req, res, next) {
         res.redirect("/products")
     }
     else{
-        res.redirect("/")
         return next()
     }
 }
@@ -48,7 +47,7 @@ const VC = new viewsController()
 
 const viewsRouter=Router()
 
-viewsRouter.get('/',VC.home)
+viewsRouter.get('/',authLogin,VC.home)
 
 viewsRouter.get('/products',auth, VC.products)
 
