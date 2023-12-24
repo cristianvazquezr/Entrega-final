@@ -175,6 +175,8 @@ if (cluster.isPrimary){
         })
     });
 
+    console.log(__dirname+ " ")
+
 }
 
 

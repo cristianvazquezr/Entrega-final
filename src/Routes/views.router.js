@@ -71,6 +71,6 @@ viewsRouter.get('/purchase/:tid',VC.purchase)
 
 viewsRouter.get('/uploader/:uid',auth,VC.uploader)
 
-viewsRouter.get('/editUsers',auth,VC.editUser)
+viewsRouter.get('/editUsers',authAdmin,VC.editUser)
 
 export default viewsRouter  
