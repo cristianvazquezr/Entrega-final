@@ -40,7 +40,7 @@ const initiliazePassport=()=>{
     passport.use('github', new GitHubStategy({
         clientID:"Iv1.8d648f50938bf4fe",
         clientSecret:"deecea5c36e82645e420a480dda1c132725aba7e",
-        callBackURL: 'loco/api/session/githubCallBack'
+        callBackURL: ''
     }, async (accessToken, refreshToken,profile,done)=>{
         try{
             console.log(profile)
