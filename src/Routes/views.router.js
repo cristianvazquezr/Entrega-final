@@ -26,7 +26,10 @@ function authLogin(req, res, next) {
     if (req.user) {
         res.redirect("/products")
     }
-    return next()
+    else{
+        res.redirect("/")
+        return next()
+    }
 }
 
 //creo el middleware para autorizar cambio de contrasena
