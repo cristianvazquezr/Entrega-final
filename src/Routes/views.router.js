@@ -27,7 +27,7 @@ function authLogin(req, res, next) {
         res.redirect("/products")
     }
     else{
-        res.redirect("/")
+        res.redirect("/home")
         return next()
     }
 }
