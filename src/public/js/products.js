@@ -110,7 +110,7 @@ async function validarCarrito(){
             }
         })
         let datos = await getUser.json()
-        user=await datos.datos[0].email
+        let user=await datos.datos[0].email
 
        //agrego el carrito al usuario
        let addCart = await fetch(`api/user/${user}/cart/${idCart}`, {
