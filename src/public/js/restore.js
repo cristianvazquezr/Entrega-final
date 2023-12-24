@@ -10,7 +10,7 @@ async function restore(){
     let user=document.getElementById('email').value
     let password=document.getElementById('password').value
 
-    let consulta = await fetch(`http://localhost:8080/api/session/restore/?user=${user}&pass=${password}`,{
+    let consulta = await fetch(`/api/session/restore/?user=${user}&pass=${password}`,{
         method:'post',
         headers: {
             "Content-Type": "application/json",

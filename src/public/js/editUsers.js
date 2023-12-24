@@ -116,7 +116,7 @@ async function logout(){
         })
         console.log("Sesion eliminada")
         sessionStorage.removeItem("carrito")
-        location.href="http://localhost:8080/login"
+        location.href="/login"
         
     }catch(err){
         console.log("fallo " + err)

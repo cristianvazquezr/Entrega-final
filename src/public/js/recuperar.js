@@ -9,7 +9,7 @@ async function restore(){
 
     let password=document.getElementById('password').value
 
-    let consulta = await fetch(`http://localhost:8080/api/session/recuperar/?pass=${password}`,{
+    let consulta = await fetch(`/api/session/recuperar/?pass=${password}`,{
         method:'post',
         headers: {
             "Content-Type": "application/json",

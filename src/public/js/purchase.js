@@ -60,7 +60,7 @@ async function logout(){
         })
         console.log("Sesion eliminada")
         sessionStorage.removeItem("carrito")
-        location.href="http://localhost:8080/"
+        location.href="/"
         
     }catch(err){
         console.log("fallo " + err)
@@ -78,7 +78,7 @@ async function purchase(){
     })
     let purchaseObj=await purchase.json()
     let idPurchase=await purchaseObj.idTicket
-    location.href=`http://localhost:8080/purchase/${idPurchase}`
+    location.href=`/purchase/${idPurchase}`
 }
 
 
@@ -106,7 +106,7 @@ async function hrefCarrito(){
     let hrefCarrito=document.getElementById("carrito")
     let idCarrito=await JSON.parse(sessionStorage.getItem('carrito'))
     if (idCarrito){
-        hrefCarrito.href= `http://localhost:8080/cart/${await idCarrito}`
+        hrefCarrito.href= `/cart/${await idCarrito}`
     }else{
         hrefCarrito.href= '' 
     }

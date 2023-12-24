@@ -19,7 +19,7 @@ async function login(){
     let user=document.getElementById('email').value
     let password=document.getElementById('password').value
 
-    let consulta = await fetch(`http://localhost:8080/api/session/login?email=${user}&password=${password}`,{
+    let consulta = await fetch(`/api/session/login?email=${user}&password=${password}`,{
         method:'post',
         headers: {
             "Content-Type": "application/json",

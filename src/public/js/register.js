@@ -56,7 +56,7 @@ async function register(){
         role:role,
     }
 
-    let consulta = await fetch(`http://localhost:8080/api/session/register`,{
+    let consulta = await fetch(`/api/session/register`,{
         method:'post',
         headers: {
             "Content-Type": "application/json",
@@ -102,7 +102,7 @@ async function logout(){
         })
         console.log("Sesion eliminada")
         sessionStorage.removeItem("carrito")
-        location.href="http://localhost:8080/login"
+        location.href="/login"
         
     }catch(err){
         console.log("fallo " + err)

@@ -39,7 +39,7 @@ async function logout(){
         })
         console.log("Sesion eliminada")
         sessionStorage.removeItem("carrito")
-        location.href="http://localhost:8080/login"
+        location.href="/login"
         
     }catch(err){
         console.log("fallo " + err)
@@ -131,7 +131,7 @@ async function hrefCarrito(){
     let hrefCarrito=document.getElementById("carrito")
     let idCarrito=await validarCarrito()
     if (idCarrito){
-        hrefCarrito.href= `http://localhost:8080/cart/${await idCarrito}`
+        hrefCarrito.href= `/cart/${await idCarrito}`
     }else{
         hrefCarrito.href= '' 
     }
