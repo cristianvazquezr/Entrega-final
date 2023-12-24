@@ -1,0 +1,185 @@
+paths:
+  /api/products/:
+    get:
+      summary: Obtiene todos los productos.
+      tags:
+        - productos
+      responses:
+        "200":
+          description: Los productos fueron obtenidos.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#components/schemas/Product'
+        "500":
+          description: fallo la consulta a la base de datos.
+    post:
+      summary: agregar productos.
+      tags:
+        - productos
+      responses:
+        "200":
+          description: el producto se agrego correctamente.
+        "400":
+          description: se repite el code de algun producto o existen campos vacios.
+  /api/products/:pid:
+    get:
+      summary: Obtiene un producto por su ID.
+      tags:
+        - productos
+      parameters:
+        - name: pid
+          in: path
+          required: true
+          description: id del producto que se desea solicitar.
+          schema:
+            $type: String
+            example: 64e7f02b6b5189f431f298dc
+      responses:
+        "200":
+          description: el producto fue encontrado 
+          content:
+            application/json:
+              schema:
+                $ref: '#components/schemas/product'
+        "400":
+          description: error en la busqueda, el ID no existe.
+    put:
+      summary: Modificar atributos de los productos.
+      tags:
+        - productos
+      parameters:
+        - name: pid
+          in: path
+          required: true
+          description: id del producto que se desea modificar.
+          schema:
+            $type: String
+            example: 64e7f02b6b5189f431f298dc
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#components/requestBodies/Updateproduct'
+      responses:
+        "200":
+          description: el producto fue actualizo correctamente 
+        "400":
+          description: error en la busqueda, el ID no existe, faltan definir parametros o el code elegido ya existe.
+    delete:
+      summary: Eliminar un producto.
+      tags:
+        - productos
+      parameters:
+        - name: pid
+          in: path
+          required: true
+          description: id del producto que se desea eliminar.
+          schema:
+            $type: String
+            example: 64e7f02b6b5189f431f298dc
+      responses:
+        "200":
+          description: el producto fue eliminado correctamente 
+        "400":
+          description: error en la busqueda, el ID no existe, o no posee permisos.    
+
+components:
+  schemas:
+    Product:
+      type: object
+      properties:
+        _id:
+          type: ObjectId
+          description: id generado por mongo
+        title:
+          type: String
+          description: Titulo de producto
+        descrption:
+          type: String
+          description: descripcion del producto
+        price:
+          type: Number
+          description: precio del producto
+        thubnail:
+          type: String
+          description: link de la imagen descrptiva del producto
+        code:
+          type: Number
+          description: Codigo unico del producto                 
+        stock:
+          type: Number
+          description: cantidad de productos disponible
+        category:
+          type: String
+          description: categoria del producto.
+        status:
+          type: Boolean
+          description: estado del producto, es true por defecto
+        owner:
+          type: String
+          description: Es el usuario que creo el producto. Solo usuarios premium y admin pueden crearlo.
+      example:
+        owner: "admin"
+        _id: "64e7f02b6b5189f431f298dc"
+        title: "Coca Cola Sin Azucar"
+        description: "Coca Cola Sin Azucar 1,5L"
+        price: 600,
+        thumbnail: "https://statics.dinoonline.com.ar/imagenes/full_600x600_ma/3080137_f.jpg"
+        code: 11,
+        stock: 193,
+        category: "gaseosas"
+        status: true,
+  requestBodies:
+    Updateproduct:
+      type: object
+      properties:
+        title:
+          type: String
+          description: Titulo de producto
+        descrption:
+          type: String
+          description: descripcion del producto
+        price:
+          type: Number
+          description: precio del producto
+        thubnail:
+          type: String
+          description: link de la imagen descrptiva del producto
+        code:
+          type: Number
+          description: Codigo unico del producto                 
+        stock:
+          type: Number
+          description: cantidad de productos disponible
+        category:
+          type: String
+          description: categoria del producto.
+        status:
+          type: Boolean
+          description: estado del producto, es true por defecto
+        owner:
+          type: String
+          description: Es el usuario que creo el producto. Solo usuarios premium y admin pueden crearlo.
+      example:
+        owner: "admin"
+        _id: "64e7f02b6b5189f431f298dc"
+        title: "Coca Cola Sin Azucar"
+        description: "Coca Cola Sin Azucar 1,5L"
+        price: 600,
+        thumbnail: "https://statics.dinoonline.com.ar/imagenes/full_600x600_ma/3080137_f.jpg"
+        code: 11,
+        stock: 193,
+        category: "gaseosas"
+        status: true,
+
+
+
+
+
+
+
+

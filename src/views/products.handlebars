@@ -1,0 +1,69 @@
+
+<div class="p-3">
+    <div class="btn-group gap-3" role="group" aria-label="Basic outlined example">
+        <a href='?query=category:gaseosa carbonatada'><button  type="button" class="btn btn-outline-primary">Gaseosas</button></a>
+        <a href='?query=category:isotonicas'><button  type="button" class="btn btn-outline-primary">Isotonicas</button></a>
+        <a href='?query=category:alcohol'><button  type="button" class="btn btn-outline-primary">Acohol</button></a>
+        <a href='?sort=asc'><button  type="button" class="btn btn-outline-primary">Ordenar ⬆️</button></a>
+        <a href='?sort=desc'><button  type="button" class="btn btn-outline-primary">Ordenar ⬇️</button></a>
+        <a href='http://localhost:8080/products/'><button  type="button" class="btn btn-outline-primary">TODAS</button></a>
+    </div>
+
+</div>
+
+
+<div class="row row-cols-1 row-cols-md-4 g-4 p-3">
+
+    {{#each product.payLoad}}  
+        <div class="col">
+            <div class="card h-100">
+            <img src={{this.thumbnail}} class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">{{this.title}}</h5>
+                <p class="card-text">Descripción: {{this.description}}</p>
+            </div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">Precio: $ {{this.price}} </li>
+                <li class="list-group-item">Categoria: {{this.category}} </li>
+            </ul>
+            <div class="card-body">
+                <a href="#" class="btn btn-primary botonAdd" id={{this._id}}>Añadir al carrito</a>
+            </div>
+            <div class="card-footer">
+                <small class="text-muted">stock: {{this.stock}} Unidades </small>
+            </div>
+            </div>
+        </div>
+    {{/each}}
+ 
+</div>
+
+<nav aria-label="...">
+  <ul class="pagination">
+    {{#if product.hasPrevPage}}
+    <li class="page-item">
+      <a class="page-link" href={{product.prevLink}} tabindex="-1" aria-disabled={{product.hasPrevPage}}>Previous</a>
+    </li>
+    {{else}}
+    <li class="page-item disabled">
+        <a class="page-link" href={{product.prevLink}} tabindex="-1" aria-disabled={{product.hasPrevPage}}>Previous</a>
+    </li>
+    {{/if}}
+    
+    <li class="page-item active" aria-current="page">
+      <span class="page-link">Pagina {{product.page}}/{{product.totalPages}}</span>
+    </li>
+    
+    {{#if product.hasNextPage}}
+    <li class="page-item">
+      <a class="page-link" href={{product.nextLink}} aria-disabled={{product.hasNextPage}}>Next</a>
+    </li>
+    {{else}}
+    <li class="page-item disabled">
+        <a class="page-link" href={{product.nextLink}} aria-disabled={{product.hasNextPage}}>Next</a>
+    </li>
+    {{/if}}
+    
+  </ul>
+</nav>
+ <script src="/js/products.js"></script>

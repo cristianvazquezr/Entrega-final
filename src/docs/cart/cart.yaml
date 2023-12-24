@@ -1,0 +1,224 @@
+paths:
+  /api/carts/:
+    get:
+      summary: Obtiene todos los carritos.
+      tags:
+        - carritos
+      responses:
+        "200":
+          description: Los carritos fueron obtenidos.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#components/schemas/cart'
+        "500":
+          description: fallo la consulta a la base de datos.
+    post:
+      summary: Crear carrito.
+      tags:
+        - carritos
+      responses:
+        "200":
+          description: El carrito se creo correctamente.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#components/schemas/cart'
+        "500":
+          description: no se pudo crear el carrito.
+  /api/carts/:cid:
+    get:
+      summary: Obtiene un carrito por su ID.
+      tags:
+        - carritos
+      parameters:
+        - name: cid
+          in: path
+          required: true
+          description: id del carrito que se desea solicitar.
+          schema:
+            $type: String
+            example: 64e695598fd07241a6cb9ef6
+      responses:
+        "200":
+          description: el carrito fue encontrado 
+          content:
+            application/json:
+              schema:
+                $ref: '#components/schemas/cart'
+        "400":
+          description: error en la busqueda, el ID no existe o no difinio el ID.
+    put:
+      summary: agregar productos al carrito.
+      tags:
+        - carritos
+      parameters:
+        - name: cid
+          in: path
+          required: true
+          description: id del carrito que se desea modificar.
+          schema:
+            $type: String
+            example: 64e695598fd07241a6cb9ef6
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#components/requestBodies/Updatecart'
+      responses:
+        "200":
+          description: el carrito fue actualizo correctamente 
+        "400":
+          description: error en la busqueda, el ID no existe, o se intentan agregar productos que no existen.
+    delete:
+      summary: Elimina los productos del carrito.
+      tags:
+        - carritos
+      parameters:
+        - name: cid
+          in: path
+          required: true
+          description: id del carrito que se desean eliminar los productos.
+          schema:
+            $type: String
+            example: 64e695598fd07241a6cb9ef6
+      responses:
+        "200":
+          description: los productos fue eliminado correctamente 
+        "400":
+          description: error en la busqueda, el ID no existe, o no posee permisos.
+  /carts/:cid/product/:pid:
+    post:
+      summary: Agregar un producto especifico al carrito.
+      tags:
+        - carritos
+      parameters:
+        - name: cid
+          in: path
+          required: true
+          description: id del carrito que se desea agregar el producto.
+          schema:
+            $type: String
+            example: 64e695598fd07241a6cb9ef6
+        - name: pid
+          in: path
+          required: true
+          description: id del producto que se desea agregar al carrito.
+          schema:
+            $type: String
+            example: 64e7f02b6b5189f431f298dc
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+                type: Object
+                properties:
+                  quantity:
+                    type: Number
+                    description: cantidad del producto a agregar
+      responses:
+        "200":
+          description: Se agrego el producto correctamente.
+        "500":
+          description: el pid o el cid no son correctos, o no tiene permisos para agregar el producto.
+    delete:
+      summary: eliminar un producto especifico.
+      tags:
+        - carritos
+      parameters:
+        - name: cid
+          in: path
+          required: true
+          description: id del carrito que se desea eliminar el producto.
+          schema:
+            $type: String
+            example: 64e695598fd07241a6cb9ef6
+        - name: pid
+          in: path
+          required: true
+          description: id del producto que se desea eliminar al carrito.
+          schema:
+            $type: String
+            example: 64e7f02b6b5189f431f298dc
+      responses:
+        "200":
+          description: Se elimino el producto correctamente.
+        "500":
+          description: el pid o el cid no son correctos, o no tiene permisos para eliminar el producto.
+    put:
+      summary: actualizar cantidad de un producto en el carrito.
+      tags:
+        - carritos
+      parameters:
+        - name: cid
+          in: path
+          required: true
+          description: id del carrito que se desea actualizar el producto.
+          schema:
+            $type: String
+            example: 64e695598fd07241a6cb9ef6
+        - name: pid
+          in: path
+          required: true
+          description: id del producto que se desea actualizar al carrito.
+          schema:
+            $type: String
+            example: 64e7f02b6b5189f431f298dc
+      responses:
+        "200":
+          description: Se actualizo el producto correctamente.
+        "500":
+          description: el pid o el cid no son correctos, o no tiene permisos para actualizar el producto. 
+
+components:
+  schemas:
+    cart:
+      type: object
+      properties:
+        _id:
+          type: ObjectId
+          description: id generado por mongo
+        products:
+          type: array
+          description: lista de productos
+      example:
+        _id: "64e695598fd07241a6cb9ef6"
+        products: 
+          product: 
+
+            owner: "admin"
+            _id: "64f000f1901c8045446d9e9f"
+            title: "Crush lima limón"
+            description: "Crush lima limón 2,25L"
+            price: 260
+            thumbnail: "https://statics.dinoonline.com.ar/imagenes/full_600x600_ma/3080209_f.jpg"
+            code: 2
+            stock: 159
+            category: "gaseosa carbonatada"
+            status: true
+          quantity: 12
+          _id: "64f13d954c8a2f030c27b91b"
+  requestBodies:
+    Updatecart:
+      type: object
+      properties:
+        products:
+          type: array
+          description: lista de productos
+      example:
+        owner: "admin"
+        _id: "64e7f02b6b5189f431f298dc"
+        title: "Coca Cola Sin Azucar"
+        description: "Coca Cola Sin Azucar 1,5L"
+        price: 600
+        thumbnail: "https://statics.dinoonline.com.ar/imagenes/full_600x600_ma/3080137_f.jpg"
+        code: 11
+        stock: 193
+        category: "gaseosas"
+        status: true

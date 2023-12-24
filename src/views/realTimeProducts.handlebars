@@ -1,0 +1,58 @@
+<div class="container">
+    <div  class="ajustes container">
+
+        <div class="formulario">
+            <form id="formularioAddProd" class="formularioPart">
+                <legend class="tituloLegend">Agregar producto
+                    <hr />
+                </legend>
+                <label htmlFor='title'> Title: </label>
+                <input class="form-control" type='text' name='title' id='title' placeholder='Title'/>
+                <label htmlFor='description'> Description: </label>
+                <input class="form-control" type='text' name='description' id='description' placeholder='description'/>
+                <label htmlFor='category'> Category: </label>
+                <input class="form-control" type='text' name='category' id='category' placeholder='category'/>
+                <label htmlFor='price'> Price: </label>
+                <input class="form-control" type='number' name='price' id='price' placeholder='1'/>
+                <label htmlFor='thumbnail'> Thumbnail: </label>
+                <input class="form-control" type='text' name='thumbnail' id='thumbnail' placeholder='thumbnail'/>
+                <label htmlFor='code'> Code: </label>
+                <input class="form-control" type='number' name='code' id='code' placeholder='1'/>
+                <label htmlFor='stock'> Stock: </label>
+                <input class="form-control" type='number' name='stock' id='stock' placeholder='1'/>
+                <label htmlFor='owner'> Owner: </label>
+                <input class="form-control" type='string' name='owner' id='owner' value={{email}} readonly="readonly"/>
+                <div class="contenedorBoton container">
+                    <button class="btn btn-outline-success btnFin" type="submit" onClick="handleClick()">AGREGAR</button>
+                </div>
+            </form>
+        </div>
+        
+        <h1>Lista de productos</h1>
+        <table class="table table-bordered">
+            <thead class="encabezado">
+                <tr>
+                    <th scope="col">Id</th>
+                    <th scope="col">Title</th>             
+                    <th scope="col">Description</th>
+                    <th scope="col">Category</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">Thumbnail</th>
+                    <th scope="col">Code</th>
+                    <th scope="col">Stock</th>
+                    <th scope="col">Status</th>
+                    <th scope="col">Owner</th>
+                    <th scope="col">Eliminar</th>
+                </tr>
+            </thead>
+            <tbody  id="contenedorTabla" class="table-group-divider">
+
+            </tbody>
+        </table>
+    </div>
+
+
+</div>
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="/js/realTimeProducts.js"></script>

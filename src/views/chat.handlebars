@@ -1,0 +1,19 @@
+<div class="container contenedorTotal">
+    <h1 class="tituloChat">Chat grupal</h1>
+    <hr>
+    <div class="contenedorChat">
+        <div id="contenedorMensajes">
+        </div>
+        <div class="container-fluid d-flex contenedorInput">
+            <input class="form-control me-2" id="user" type="text" placeholder="usuario">
+            <input  class="form-control me-2" id="message" type="text" placeholder="mensaje">
+            <button class="btn btn-outline-success" onclick="handleClick()">enviar</button>
+            <div id="alert">
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="/js/chat.js"></script>
+<script src="/js/countCart.js"></script>

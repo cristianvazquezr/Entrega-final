@@ -1,0 +1,273 @@
+.ajustes h1{
+    padding: 3vh;
+    font-size: 300%;
+    font-weight: 400;
+    font-family: 'Times New Roman', Times, serif;
+    color: #687D77;
+    width: 100%;
+    margin-bottom: 6vh;
+}
+
+.tituloChat{
+    padding: 0.5vh;
+    font-size: 300%;
+    font-weight: 400;
+    font-family: 'Times New Roman', Times, serif;
+    color: #687D77;
+    width: 100%;
+}
+
+.ajustes{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.encabezado{
+    color: #ffffff;
+    background-color: #687D77;
+}
+.formularioPart{
+    width: 50%;
+    border: 1px rgba(128, 128, 128, 0.29) solid ;
+    border-radius: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #687d770f;
+}
+
+.formularioPart input{
+    width: 90%;
+}
+.formularioPart legend{
+    font-family: 'Times New Roman', Times, serif;
+    color:#687D77;
+    font-size: 200%;
+}
+.formulario{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 10vh;
+}
+
+.btnFin{
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+}
+.tituloLegend{
+    text-align: center;
+}
+
+
+.contenedorTotal{
+    width: 30vw;
+    border-style:solid;
+    border-color: #687D77;
+    padding: 2vw;
+    margin-top: 5vh;
+}
+.nav-link{
+    font-size: 120%;
+    border-color: #687D77;
+
+}
+.navbar{
+    background-color: #ffffff;
+    padding: 0;
+    
+}
+
+.contenedorPrincipal{
+    background-color: #c1c1c11a;
+    
+}
+
+.itemsNavBar{
+    display: flex;
+    justify-content: space-between;
+}
+#carrito{
+    display: flex;
+
+}
+#numerito{
+    text-decoration: none
+}
+.cart-user{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.user{
+    width: 50%;
+}
+
+.botonUser{
+    width: auto;
+    height: 50px;
+    background-color: rgba(74, 73, 73, 0.098);
+    
+}
+#usuario{
+    position: relative;
+    top:100px
+
+}
+
+.login{
+    width: 40vw;
+    margin: none;
+    background-color: #6d6d6d36;
+    border-radius: 10%;
+}
+.contendorLogin{
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 80px;
+}
+.formularioLogin{
+    margin: 3vw;
+}
+.gitHubLogin{
+    width: 120px;
+}
+.btnGit{
+    background-color:rgb(255, 255, 255);
+    border-color: black;
+    color: black;
+}
+.btnLogin{
+    height: 50px;
+    width: 120px;
+}
+
+.ocultarElemento{
+    visibility: hidden;
+}
+.titleError{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.restore, .register{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.restore a, .register a{
+    margin-bottom:8px
+}
+.slogan{
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    height: 100%;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url("/../../images/LogoFondo.png");
+}
+.subSlogan{
+    text-align: center;
+    padding-top: 10vh;
+}
+
+.contenedorSlogan{
+    height: 100vh;
+}
+
+.ocultarComponente{
+    display: none;
+    visibility: hidden;
+}
+
+.colorFondo{
+    background-color: #ffffff;
+}
+
+.subSlogan h1{
+    font-family: 'Passion One', cursive;
+    font-weight: 700;
+    font-size: 6vw;
+}
+
+.tituloMarca{
+    color: #997150;
+}
+.subSlogan h3{
+    font-family: 'Gruppo', sans-serif;
+    font-size: 4vw;
+}
+
+.subSlogan h4{
+    font-family: 'Gruppo', sans-serif;
+    font-size: 3vw;
+}
+.loginRegister{
+    padding-top: 10vh;
+}
+
+.btnLoginRegister{
+    display: flex;
+    flex-direction: column;
+    height: 40vh;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 7px 7px 20px 2px gray;
+}
+
+.inicio{
+    width: 30vw;
+    margin: none;
+    background-color: #dedede15;
+    border-radius: 10%;
+}
+
+.btnGitHome, .btnIngresar, .btnRegistrar{
+    width: 20vw;
+    height: 60px;
+
+}
+
+.btnGitHome{
+    background-color:rgb(255, 255, 255);
+    border-color: black;
+    color: black;
+}
+
+.btnGitHome:hover {
+    color: #fff;
+    background-color: #75797b5e;
+    border-color: #75797b5e;
+}
+
+.restored{
+    width: 50vw;
+    margin: none;
+    background-color: #6d6d6d36;
+    border-radius: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.itemsDocuments{
+    display: none;
+}
+
+.true{
+    display: flex;
+}
+
+
+.dropdown-menu{
+    height: 250px;
+    width: 250px;
+   
+}
+
+.imgTable{
+    height: 10vh;
+}

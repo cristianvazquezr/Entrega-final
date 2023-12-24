@@ -1,0 +1,57 @@
+[
+    {
+        "id": 1,
+        "title": "Coca Cola",
+        "description": "gaseosas",
+        "price": 100,
+        "thumbnail": "imagen.com",
+        "code": 1,
+        "stock": 100,
+        "category": "gaseosa carbonatada",
+        "status": true
+    },
+    {
+        "id": 2,
+        "title": "Pepsi",
+        "description": "gaseosas",
+        "price": 80,
+        "thumbnail": "imagen.com",
+        "code": 2,
+        "stock": 100,
+        "category": "gaseosa carbonatada",
+        "status": true
+    },
+    {
+        "id": 3,
+        "title": "Sprite",
+        "description": "gaseosas",
+        "price": 95,
+        "thumbnail": "imagen.com",
+        "code": 3,
+        "stock": 100,
+        "category": "gaseosa carbonatada",
+        "status": true
+    },
+    {
+        "id": 4,
+        "title": "sevenUP",
+        "description": "gaseosas",
+        "price": 90,
+        "thumbnail": "imagen.com",
+        "code": 4,
+        "stock": 100,
+        "category": "gaseosa carbonatada",
+        "status": true
+    },
+    {
+        "id": 5,
+        "title": "pritty",
+        "description": "gaseosas",
+        "price": 60,
+        "thumbnail": "imagen.com",
+        "code": 5,
+        "stock": 100,
+        "category": "gaseosa carbonatada",
+        "status": true
+    }
+]

@@ -1,0 +1,117 @@
+00:22:14	Roberto Torales:	que cambiado el profe
+00:22:20	Mariel Boher:	Reacted to "que cambiado el prof..." with 😂
+00:23:01	[TUTOR] Nicolás López Cesan:	Buenass!
+00:25:34	Juan Pablo Ciceri:	sisi ya quedamos pocos
+00:25:34	Mariel Boher:	no profe
+00:25:40	[TUTOR] Nicolás López Cesan:	A esta altura del curso ya no quedan muchos
+00:28:09	[Profesor] Juan Torres:	DevOps
+00:34:01	Juan Pablo Ciceri:	perfecto
+00:36:03	Santiago Muscolo:	procede a explicar CI/CD💀*
+00:37:33	Santiago Muscolo:	nono profe es un meme
+00:37:34	Santiago Muscolo:	jasjajs
+00:37:37	Roberto Torales:	sdjafsdaf
+00:37:55	[Profesor] Juan Torres:	https://hub.docker.com/
+00:43:18	Roberto Torales:	si
+00:43:20	Juan Pablo Ciceri:	si profe
+00:43:31	Santiago Muscolo:	atentos profe
+00:43:35	Roberto Torales:	siempre enfocados
+00:43:40	Santiago Muscolo:	focus mode on
+00:43:44	[TUTOR] Nicolás López Cesan:	Reacted to "focus mode on" with 😝
+00:43:44	Roberto Torales:	jashja
+00:46:59	Aranzazu Galvaliz:	no profe
+00:47:23	Aranzazu Galvaliz:	yo lo tengo instalado pero me tira un error
+00:47:49	Juan Pablo Ciceri:	abrilo aranza
+00:47:49	Aranzazu Galvaliz:	error during connect: this error may indicate that the docker daemon is not running: Get "http://%2F%2F.%2Fpipe%2Fdocker_engine/v1.24/containers/json": open //./pipe/docker_engine: The system cannot find the file specified.
+00:47:56	Juan Pablo Ciceri:	abri el Docker deskt
+00:47:59	Aranzazu Galvaliz:	ah ok gracias
+00:48:13	[TUTOR] Nicolás López Cesan:	Reacted to "abri el Docker deskt" with 👌
+00:48:17	Juan Pablo Ciceri:	Reacted to "ah ok gracias" with ❤️
+00:49:07	Aranzazu Galvaliz:	listo se soluciono gracias Juan
+00:49:14	Juan Pablo Ciceri:	Reacted to "listo se soluciono g..." with 👏
+00:49:18	[TUTOR] Nicolás López Cesan:	Reacted to "listo se soluciono g..." with 👏
+00:51:29	Aranzazu Galvaliz:	profe
+00:51:44	Aranzazu Galvaliz:	puede explicar de nuevo
+00:51:44	Aranzazu Galvaliz:	:)
+00:52:01	Aranzazu Galvaliz:	esa parte del Docker run
+00:52:08	Aranzazu Galvaliz:	se me tilda
+00:52:10	Aranzazu Galvaliz:	internet
+00:52:16	Aranzazu Galvaliz:	no tengo nada de eso jjajaja
+00:52:58	Aranzazu Galvaliz:	ok y eso va a ir a mongo?
+00:53:05	Aranzazu Galvaliz:	o solo le pusiste mongo?
+00:53:17	Aranzazu Galvaliz:	ok
+00:53:44	Aranzazu Galvaliz:	ahhhh ok
+00:53:46	Aranzazu Galvaliz:	ahora entiendo
+00:54:16	Juan Pablo Ciceri:	si profe
+00:54:19	Juan Pablo Ciceri:	se entendio
+00:57:30	Aranzazu Galvaliz:	profe esa imagen con darle ese run se descarga sola en Docker?
+00:57:45	Aranzazu Galvaliz:	podes pasarnos ese run?
+00:57:59	[Profesor] Juan Torres:	docker run -it -p 27017:27017 --name monguito -d mongo
+00:58:03	Aranzazu Galvaliz:	gracias :)
+01:00:05	Mariel Boher:	cuando quiero ingresar a Docker me da este error, que debería hacer?Listing WSL distros: running WSL command wls.exe -l-v --all
+01:00:56	Roberto Torales:	sipi
+01:01:30	[TUTOR] Nicolás López Cesan:	Replying to "cuando quiero ingres..."
+
+En qué momento te da ese error? Desde la consola o Docker desktop?
+01:02:13	[TUTOR] Nicolás López Cesan:	Replying to "cuando quiero ingres..."
+
+estás usando la consola de wsl en Windows?
+01:02:20	Mariel Boher:	Replying to "cuando quiero ingres..."
+
+cuando quiero inicar sesión desde el Docker desktop
+01:02:45	Mariel Boher:	Replying to "cuando quiero ingres..."
+
+nono solo abri el Docker desktop me quiero loguar y me pasa eso
+01:03:53	[TUTOR] Nicolás López Cesan:	Replying to "cuando quiero ingres..."
+
+cerraste y volviste a abrir?
+01:03:58	[TUTOR] Nicolás López Cesan:	Replying to "cuando quiero ingres..."
+
+pásame una captura porfa
+01:04:35	[Profesor] Emanuel Tevez:	Estoy
+01:04:45	Aranzazu Galvaliz:	prode
+01:04:47	Aranzazu Galvaliz:	profe
+01:04:54	Aranzazu Galvaliz:	se colgó en la descarga
+01:05:06	Aranzazu Galvaliz:	dice download
+01:05:11	Aranzazu Galvaliz:	complete
+01:05:17	Aranzazu Galvaliz:	pero nunca hizo el pull
+01:05:21	Aranzazu Galvaliz:	ok
+01:05:56	Aranzazu Galvaliz:	ahí hice eso y comenzó a hacer el pull
+01:08:07	Aranzazu Galvaliz:	si son ejemplos profe en realidad
+01:11:27	Mariel Boher:	Replying to "cuando quiero ingres..."
+
+te llego?
+01:13:13	[TUTOR] Nicolás López Cesan:	Replying to "cuando quiero ingres..."
+
+sip, ahí pude verlo
+01:14:08	[TUTOR] Nicolás López Cesan:	Replying to "cuando quiero ingres..."
+
+que raro, estoy viendo que puede ser
+01:15:03	Aranzazu Galvaliz:	que esta aqui
+01:15:11	[TUTOR] Nicolás López Cesan:	Replying to "cuando quiero ingres..."
+
+consulta, tenes wsl instalado o sólo instalaste Docker desktop para Windows normalmente?
+01:15:36	[TUTOR] Nicolás López Cesan:	Replying to "cuando quiero ingres..."
+
+en algun momento te anduvo o desde siempre tira ese error?
+01:16:35	Roberto Torales:	jdsajas si profe todo claro
+01:21:46	Roberto Torales:	maso
+01:21:54	Aranzazu Galvaliz:	me sigue sin descargar asi que no puedo probar nada
+01:22:36	Roberto Torales:	10 minutos
+01:22:37	[TUTOR] Nicolás López Cesan:	Replying to "me sigue sin descarg..."
+
+te da algun error o simplemente se corta?
+01:33:37	Aranzazu Galvaliz:	hola
+01:33:40	Juan Pablo Ciceri:	aca
+01:33:53	Roberto Torales:	se vuelve
+01:46:26	Juan Pablo Ciceri:	muy bueno}
+01:52:11	[Profesor] Juan Torres:	https://hub.docker.com/repository/docker/alexmarinmendez/expressapi55305/general
+01:53:50	Aranzazu Galvaliz:	profe yo no pude probar nada
+01:53:59	Aranzazu Galvaliz:	por eso no me surgen dudas
+01:54:13	Juan Pablo Ciceri:	bien se entendio perfecto
+02:12:35	[Profesor] Juan Torres:	https://github.com/alexmarinmendez/55305-clase-36-kubernetes
+02:13:56	Juan Pablo Ciceri:	sisi, solo para que tengamos idea
+02:19:20	[Tutor] Emanuel Tevez:	Genial!!!!
+02:19:27	[Tutor] Emanuel Tevez:	Felicitaciones!!!!
+02:19:31	[Tutor] Emanuel Tevez:	Saludos!!!
+02:19:52	[TUTOR] Nicolás López Cesan:	Gracias!
+02:19:55	[TUTOR] Nicolás López Cesan:	Saludos

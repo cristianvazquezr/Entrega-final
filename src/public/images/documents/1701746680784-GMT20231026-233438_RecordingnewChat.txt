@@ -1,0 +1,135 @@
+00:48:14	Aranzazu Galvaliz:	hola
+00:48:26	Stephanie Legarra:	Hola!!
+00:48:54	Aranzazu Galvaliz:	profe puede explicar
+00:49:01	Aranzazu Galvaliz:	de nuevo
+00:49:09	Aranzazu Galvaliz:	la ultima parte del desafio
+00:49:13	Aranzazu Galvaliz:	?
+00:49:14	Jorgelina Velli:	en mi caso, estaba arreglando la entrega anterior. no pude tocar lo ultimo
+00:49:26	Mariel Boher:	Replying to "la ultima parte del ..."
+
+si porfa !
+00:49:59	Aranzazu Galvaliz:	si profe solo no tuve tiempo
+00:51:37	Juan Pablo Ciceri:	sisi se ve
+00:54:02	Aranzazu Galvaliz:	profe el Docker para visual studio es lo mismo o no?
+00:54:33	Aranzazu Galvaliz:	pero sirve?
+00:54:44	Juan Pablo Ciceri:	instalandoo
+00:59:12	Juan Pablo Ciceri:	perdón tuve q reiniciar la pc para finalizar la instalacióncdel docker
+01:03:26	Aranzazu Galvaliz:	por eso las colas virtuales
+01:15:01	Aranzazu Galvaliz:	claro como un tenedor todo viene del mismo cuerpo y se abre en dientes
+01:17:05	[Profesor] Juan Torres:	import cluster from 'cluster';import cluster from 'cluster';
+01:17:07	[Profesor] Juan Torres:	import cluster from 'cluster';
+01:19:15	[Profesor] Juan Torres:	console.log("Es proceso primario? " + cluster.isPrimary);
+01:23:08	Aranzazu Galvaliz:	hola volvi con Docker instalado
+01:25:16	Aranzazu Galvaliz:	profe una pregunta es mejor: iniciar sesión con Google o con GitHub?
+01:25:37	Aranzazu Galvaliz:	si me pide
+01:25:42	Aranzazu Galvaliz:	ok goolgle
+01:26:46	Aranzazu Galvaliz:	profe
+01:26:52	Aranzazu Galvaliz:	intente con Google y no me dejo
+01:26:56	Aranzazu Galvaliz:	me tira error
+01:28:20	Aranzazu Galvaliz:	no me dejo crear la cuenta
+01:29:01	Juan Pablo Ciceri:	Replying to "no me dejo crear la ..."
+
+wsl.exe --update
+01:29:16	Juan Pablo Ciceri:	Replying to "no me dejo crear la ..."
+
+que error te tira?
+01:29:43	Aranzazu Galvaliz:	ahí pude con el otro mail
+01:29:55	Aranzazu Galvaliz:	gracias profe :)
+01:31:23	[Profesor] Juan Torres:	import { cpus } from 'os';
+01:33:04	[Profesor] Juan Torres:	const numerodeprocesadores = cpus().length;
+01:35:08	Aranzazu Galvaliz:	profe se me tildo aca el Docker
+01:35:23	Aranzazu Galvaliz:	es normal que tarde en arrancar?
+01:36:09	[TUTOR] Nicolás López Cesan:	Replying to "es normal que tarde ..."
+
+no debería demorar
+01:36:31	[TUTOR] Nicolás López Cesan:	Replying to "es normal que tarde ..."
+
+si se colgó, intentá finalizar el proceso
+01:37:51	Aranzazu Galvaliz:	Replying to "es normal que tarde ..."
+
+tipo lo cierro y lo vuelvo a abrir?
+01:38:00	[TUTOR] Nicolás López Cesan:	Replying to "es normal que tarde ..."
+
+si
+01:38:10	Aranzazu Galvaliz:	Replying to "es normal que tarde ..."
+
+dale hago eso a ver si se puede
+01:38:17	Mariel Boher:	ami me paso de todojaja noes compatible con windows
+01:38:21	[TUTOR] Nicolás López Cesan:	Replying to "es normal que tarde ..."
+
+y sino desde el administrador de tareas
+01:38:27	Mariel Boher:	asique estoy actualizando windows
+01:38:47	[TUTOR] Nicolás López Cesan:	Reacted to "asique estoy actuali..." with 😝
+01:39:02	Aranzazu Galvaliz:	Replying to "es normal que tarde ..."
+
+dale ahí intente lo de cerrar y volver a abrir, si no funciona hago lo otro
+01:39:36	Aranzazu Galvaliz:	ahora si gracias Nico
+01:39:47	[TUTOR] Nicolás López Cesan:	Reacted to "ahora si gracias Nic..." with 🙌
+01:48:15	Mariel Boher:	Reacted to "asique estoy actuali..." with 😝
+01:49:20	Juan Pablo Ciceri:	sisis ya estamos
+01:49:38	Jorgelina Velli:	profe, yo no puede instarlo
+01:49:59	[TUTOR] Nicolás López Cesan:	Replying to "profe, yo no puede i..."
+
+por?
+01:50:11	Aranzazu Galvaliz:	profeee
+01:50:32	Jorgelina Velli:	a mi me queda asi
+01:50:55	Juan Pablo Ciceri:	inicia sesión
+01:51:04	Juan Pablo Ciceri:	desp cerra y volve a abrir
+01:51:14	Jorgelina Velli:	Replying to " desp cerra y volve ..."
+
+ya lo intente
+01:51:27	Aranzazu Galvaliz:	Replying to "{44624DB3-DB24-4E69-B209-44B6894A53A2}.png"
+
+sing in amiga arriba
+01:52:12	[Tutor] Emanuel TEVEZ:	Replying to "inicia sesión"
+
+Te mande el link por privado a la plataforma
+01:52:21	[Tutor] Emanuel TEVEZ:	Replying to " desp cerra y volve ..."
+
+reiniciar la maquina
+01:52:33	Jorgelina Velli:	Replying to " desp cerra y volve ..."
+
+@[Tutor] Emanuel TEVEZ tmb lo hice
+01:54:06	Jorgelina Velli:	no abre, inicio, y tampoco
+01:56:04	Aranzazu Galvaliz:	profe y que podemos hacer en un caso como el de mi amiga que no le anda Docker? aunque reiniciemos la compu?
+01:56:26	Aranzazu Galvaliz:	pero que solución podríamos hacer?
+01:56:38	[TUTOR] Nicolás López Cesan:	Debería funcionar
+01:57:02	[TUTOR] Nicolás López Cesan:	Aunque Docker en Windows suele tener muchos problemas. Por lo general se usa con Linux (o mac)
+01:57:36	Aranzazu Galvaliz:	profe ahí esta pidiendo hablar ella
+01:58:24	[Profesor] Juan Torres:	Docker -v
+01:58:31	Jorgelina Velli:	Replying to "profe ahí esta pidie..."
+
+no pasa nada, gracias!!
+02:00:13	Mariel Boher:	rcp
+02:00:20	Aranzazu Galvaliz:	Reacted to "rcp" with 🤣
+02:03:51	[Profesor] Juan Torres:	cluster.on('disconnect', worker => {
+        cluster.fork();
+    });
+02:04:39	[TUTOR] Nicolás López Cesan:	Reacted to "rcp" with 🤣
+02:05:24	[Profesor] Juan Torres:	5 a 6 mins
+02:11:06	[Profesor] Juan Torres:	Chicos me avisan que ya anden por aca
+02:11:19	Aranzazu Galvaliz:	aca estamos
+02:11:34	Jorgelina Velli:	estamos…
+02:11:38	Stephanie Legarra:	:)
+02:12:05	Jorgelina Velli:	sigue igual…
+02:12:57	Jorgelina Velli:	no quiere saber nada, dsp lo mira alguien que si entienda
+02:15:27	[Profesor] Juan Torres:	Maquinas virtuales
+02:16:27	Aranzazu Galvaliz:	nunca intente eso
+02:16:45	[Tutor] Emanuel TEVEZ:	Virtualbux
+02:16:52	[Tutor] Emanuel TEVEZ:	virtualbox
+02:19:13	[Tutor] Emanuel TEVEZ:	Mandaban la imagen con el soft para practicar
+02:45:23	[TUTOR] Nicolás López Cesan:	Lo ideal es aprender a usar la línea de comandos en Docker, es mucho más rápido. Una vez que se acostumbran, no hay vuelta atrás 👌
+02:52:33	[Profesor] Juan Torres:	https://curl.se/download.html
+02:52:37	Jorgelina Velli:	profe una cosita
+02:52:41	[TUTOR] Nicolás López Cesan:	Recuerden valorar la clase! 🙌
+02:52:44	Jorgelina Velli:	es con J
+02:52:48	Juan Pablo Ciceri:	graciaas
+02:52:50	Jorgelina Velli:	jorgelina…
+02:52:54	[TUTOR] Nicolás López Cesan:	Reacted to "es con J" with 👌
+02:52:59	Jorgelina Velli:	jor
+02:53:04	Juan Pablo Ciceri:	buen fin de semana!!
+02:53:16	Jorgelina Velli:	hasta el martes
+02:53:23	Juan Pablo Ciceri:	Replying to "jor"
+
+yor
+02:53:23	[TUTOR] Nicolás López Cesan:	nos vemos!

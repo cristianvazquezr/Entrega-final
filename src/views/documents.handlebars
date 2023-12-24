@@ -1,0 +1,61 @@
+<div>
+    <div class="formulario">
+        <form id="formularioAddProd" class="formularioPart">
+            <legend class="tituloLegend">Registro de documentos
+                <hr />
+            </legend>
+            <label htmlFor='nombre'> Nombre: </label>
+            <input class="form-control" type='text' name='nombre' id='nombre' placeholder='{{name}}' readonly='readonly'/>
+            <label htmlFor='apellido'> Apellido: </label>
+            <input class="form-control" type='text' name='apellido' id='apellido' placeholder='{{lastname}}' readonly='readonly'/>
+            <label htmlFor='email'> E-mail: </label>
+            <input class="form-control" type='text' name='email' id='email' placeholder='{{email}}' readonly='readonly'/>
+            <label htmlFor='edad'> Edad: </label>
+            <input class="form-control" type='text' name='edad' id='edad' placeholder='{{age}}' readonly='readonly'/>
+            <label htmlFor='admin'> Administrator: </label>
+            <input class="form-control" type='text' name='admin' id='admin' placeholder='{{role}}' readonly='readonly'/>
+            <div id="alerta" class="form-text"></div>
+        </form>
+        {{!-- document  --}}
+        <form action="../api/user/{{idUser}}/documents/document" method="post" enctype="multipart/form-data" class="formularioPart">
+            <label htmlFor='document'> Documento: </label>
+            <input class="form-control" type='file' name='document' id='document'/>
+            <label htmlFor='documentType'> tipo de documento: </label>
+            <select name="documentType" id="documentType">
+                <option value="" >--none--</option>
+                <option value="identificacion" >Identificación</option>
+                <option value="domicilio">Comprobante de domicilio</option>
+                <option value="cuenta">Estado de cuenta</option>
+            </select>
+            <ul>
+                <li style='display:{{identification}}'>✅ Identidad</li>
+                <li style='display:{{location}}'>✅ Domicilio</li>
+                <li style='display:{{account}}'>✅ Cuenta</li>
+            </ul>  
+
+
+            <div class="contenedorBoton container">
+                <button type="submit" class="btn btn-outline-success btnFin btnCargar" id="botonRegisterD">AGREGAR</button>
+            </div>
+
+        </form>
+        {{!-- profile --}}
+         <form action="api/user/{{idUser}}/documents/profile" method="post" enctype="multipart/form-data" class="formularioPart">
+            <label htmlFor='profile'> Imagen de perfil: </label>
+            <input class="form-control" type='file' name='profile' id='profile'/>
+            <div class="contenedorBoton container">
+                <button type="submit" class="btn btn-outline-success btnFin btnCargar" id="botonRegisterP">AGREGAR</button>
+            </div>
+        </form>
+        {{!-- products --}}
+         <form action="api/user/{{idUser}}/documents/product" method="post" enctype="multipart/form-data" class="formularioPart">
+            <label htmlFor='product'> Productos: </label>
+            <input class="form-control" type='file' name='product' id='product'/>
+            <div class="contenedorBoton container">
+                <button type="submit" class="btn btn-outline-success btnFin btnCargar" id="botonRegisterProd">AGREGAR</button>
+            </div>
+        </form>
+
+    </div>
+</div>
+<script src="/js/documents.js"></script>

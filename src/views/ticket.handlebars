@@ -1,0 +1,65 @@
+<div class="container">
+    <div class="ajustes container">
+        <h1>Compra finalizada con éxito</h1>
+        <h6>fecha y hora: {{fecha}}</h6>
+        <h5>id de compra # {{idBuy}}</h5>
+        <h5>Cliente: {{nameClient}} {{lastNameClient}}</h5>
+        <table class="table table-bordered">
+            <thead class="encabezado">
+                <tr>
+                    <th scope="col">Id</th>
+                    <th scope="col">Titulo</th>             
+                    <th scope="col">Categoria</th>
+                    <th scope="col">Precio ($)</th>
+                    <th scope="col">Cantidad</th>
+                    <th scope="col">Total($)</th>
+                </tr>
+            </thead>
+            <tbody class="table-group-divider">
+                {{#each productos}}
+                    <tr key={{this.product._id}}>
+                        <td>{{this.product._id}}</td>
+                        <td>{{this.product.title}}</td>
+                        <td>{{this.product.category}}</td>
+                        <td id=p{{this.product._id}} class="price">{{this.product.price}}</td>
+                        <td id=q{{this.product._id}} class="quantity">{{this.quantity}}</td>
+                        <td id={{this.product._id}} class="totalPrice"></td>
+                    </tr>
+                {{/each}}
+            </tbody>
+        </table>
+
+         <h3>Productos no agregados a la orden por falta de stock</h3>
+
+        <table class="table table-bordered">
+            <thead class="encabezado">
+                <tr>
+                    <th scope="col">Id</th>
+                    <th scope="col">Titulo</th>             
+                    <th scope="col">Categoria</th>
+                    <th scope="col">Precio ($)</th>
+                    <th scope="col">Cantidad</th>
+                    <th scope="col">Total($)</th>
+                </tr>
+            </thead>
+            <tbody class="table-group-divider">
+                {{#each sinStock}}
+                    <tr key={{this.product._id}}>
+                        <td>{{this.product._id}}</td>
+                        <td>{{this.product.title}}</td>
+                        <td>{{this.product.category}}</td>
+                        <td id=pss{{this.product._id}} class="price">{{this.product.price}}</td>
+                        <td id=qss{{this.product._id}} class="quantity">{{this.quantity}}</td>
+                        <td id=ss{{this.product._id}} class="totalPrice"></td>
+                    </tr>
+                {{/each}}
+            </tbody>
+        </table>
+
+
+
+    </div>
+    
+</div>
+
+<script src="/js/purchase.js"></script>
