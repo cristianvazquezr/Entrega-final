@@ -150,8 +150,8 @@ class userMananger{
             let hasNextPage=listaUsuarios.hasNextPage
             let prevPage=listaUsuarios.prevPage
             let nextPage=listaUsuarios.nextPage
-            let prevLink= hasPrevPage!=false ? 'http://localhost:8080/users/?limit=' + limit + "&page=" + prevPage : null;
-            let nextLink= hasNextPage!=false ? 'http://localhost:8080/users/?limit=' + limit + "&page=" + nextPage : null;
+            let prevLink= hasPrevPage!=false ? '/users/?limit=' + limit + "&page=" + prevPage : null;
+            let nextLink= hasNextPage!=false ? '/users/?limit=' + limit + "&page=" + nextPage : null;
 
             listaUsuarios={
                 status:status, 

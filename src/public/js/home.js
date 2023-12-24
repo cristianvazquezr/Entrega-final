@@ -10,7 +10,7 @@ contPrinc.className=contPrinc.className + " colorFondo"
 let botonLoginGH = document.getElementById("btnGitHome")
 botonLoginGH.onclick = (event)=>{
     event.preventDefault()
-    location.href='/api/session/github'
+    location.href='/api/session/githubCallBack'
 }
 
 //boton de ingresar

@@ -49,8 +49,8 @@ class ProductManager{
             let hasNextPage=listaProducto.hasNextPage
             let prevPage=listaProducto.prevPage
             let nextPage=listaProducto.nextPage
-            let prevLink= hasPrevPage!=false ? 'http://localhost:8080/products/?limit=' + limit + "&page=" + prevPage : null;
-            let nextLink= hasNextPage!=false ? 'http://localhost:8080/products/?limit=' + limit + "&page=" + nextPage : null;
+            let prevLink= hasPrevPage!=false ? '/products/?limit=' + limit + "&page=" + prevPage : null;
+            let nextLink= hasNextPage!=false ? '/products/?limit=' + limit + "&page=" + nextPage : null;
 
             listaProducto={
                 status:status, 

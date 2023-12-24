@@ -31,7 +31,7 @@ class mailController{
             html:`
             <div>
                 <h1>PARA RESTABLECER SU CONTRASENA INGRESE AL SIGUIENTE LINK: </h1>
-                <a href="http://localhost:8080/recuperar"> CLICK AQUI </a>
+                <a href="/recuperar"> CLICK AQUI </a>
             </div>
             `,
             attachments:[]
