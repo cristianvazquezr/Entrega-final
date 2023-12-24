@@ -5,8 +5,8 @@ import { authorization, authorizationAdminPremium, } from "../utils.js"
 
 //creo el middleware para autenticar administrador
 function authAdmin(req, res, next) {
-    if (req?.admin) {
-    return next()
+    if (req.user.role=='admin') {
+        return next()
     }
     return res.status(401).send('error de autorización! Ingrese con un usuario administrador')
 }
@@ -45,7 +45,7 @@ const VC = new viewsController()
 
 const viewsRouter=Router()
 
-viewsRouter.get('/',VC.home)
+viewsRouter.get('/',authLogin,VC.home)
 
 viewsRouter.get('/products',auth, VC.products)
 
